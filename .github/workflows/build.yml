@@ -11,6 +11,11 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/configure-pages@v3
         id: configure_pages
+      - uses: actions/cache@v3
+        with:
+          path: .paradicms/cache
+          key: ${{ runner.os }}-paradicms-cache
+      - run: rm -fr .paradicms/cache/google-sheets
       - uses: paradicms/spreadsheet-etl-action@v1-beta
         with:
           spreadsheet: ${{ secrets.SPREADSHEET }}
