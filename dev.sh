@@ -11,7 +11,7 @@ PROJECTS_DIR_PATH=$PWD/..
 
 cd $PROJECTS_DIR_PATH/paradicms/lib/py/ssg
 
-poetry run $PROJECTS_DIR_PATH/spreadsheet-etl-action/action.py \
+poetry run $PROJECTS_DIR_PATH/paradicms-spreadsheet-etl-action/action.py \
   --cache-directory-path $CACHE_DIR_PATH \
   --force-extract \
   --loaded-data-directory-path $DATA_DIR_PATH \
@@ -19,7 +19,7 @@ poetry run $PROJECTS_DIR_PATH/spreadsheet-etl-action/action.py \
   --spreadsheet "1WdwolQU728-DQSnNduXPyVAZloutGKFkUBKTXIqHZcU" \
   "$@"
 
-poetry run $PROJECTS_DIR_PATH/ssg-action/action.py \
+poetry run $PROJECTS_DIR_PATH/paradicms-ssg-action/action.py \
   --cache-directory-path $CACHE_DIR_PATH \
   --data-path $DATA_DIR_PATH \
   --dev \
